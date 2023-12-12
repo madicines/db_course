@@ -50,7 +50,7 @@ GROUP BY o.CUSTID;
 **Ответ:**
 
  ```mysql
-SELECT o.CUSTID, p.UNITPRICE * od.QTY as "SUM"  
+SELECT o.CUSTID, SUM(p.UNITPRICE * od.QTY) as "SUM"
 FROM "Sales"."Orders" o join "Sales"."OrderDetails" od using (ORDERID) JOIN "Production"."Products" p  
 USING (PRODUCTID)  
 GROUP BY p.UNITPRICE, o.CUSTID, od.QTY  
@@ -68,7 +68,7 @@ limit 5;
 **Ответ:** 
 
  ```mysql
-SELECT o.CUSTID, p.UNITPRICE * od.QTY as top_sum  
+SELECT o.CUSTID, SUM(p.UNITPRICE * od.QTY) as top_sum  
 FROM "Sales"."Orders" o join "Sales"."OrderDetails" od using (ORDERID) JOIN "Production"."Products" p USING (PRODUCTID)  
 WHERE p.UNITPRICE::NUMERIC * od.QTY > 1000  
 GROUP BY p.UNITPRICE, o.CUSTID, od.QTY  
