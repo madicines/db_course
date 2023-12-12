@@ -112,7 +112,7 @@ FROM "Sales"."Orders" order by orderdate DESC NULLS last limit 1);
 
 IN использую, чтобы найти последнюю дату из числа всех заказов. Подзапрос вернет одно значение:
 
-![](https://github.com/madicines/db_spbtsu/blob/252028949ac03f1c0b7ea253c7d5a4b5e6d8830f/Pasted%20image%2020231212114401.png)
+![](https://github.com/madicines/db_spbtsu/blob/1908adb64a8b8b1e051ad8b92deba60b5b1a6e69/Pasted%20image%2020231212114401.png)
 
 ***
 ### № 3
