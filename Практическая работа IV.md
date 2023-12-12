@@ -10,19 +10,7 @@
 **Ответ:**
 
  ```mysql
-WITH SalesOrderValues AS (  
-SELECT O.custid, O.orderid, O.orderdate,  
-COALESCE(SUM(OD.unitprice::NUMERIC * OD.qty), 0) AS val  
-FROM "Sales"."Orders" O  
-LEFT JOIN "Sales"."OrderDetails" OD ON O.orderid = OD.orderid  
-GROUP BY O.custid, O.orderid, O.orderdate)  
-SELECT SOV.custid, SOV.orderid, SOV.orderdate, SOV.val AS current_val,  
-COALESCE(PREVIOUS.val, 0) AS previous_val,  
-SOV.val - COALESCE(PREVIOUS.val, 0) AS val_difference  
-FROM SalesOrderValues SOV  
-LEFT JOIN ( SELECT custid, orderdate, val  
-FROM SalesOrderValues) PREVIOUS ON SOV.custid = PREVIOUS.custid AND SOV.orderdate = PREVIOUS.orderdate+INTERVAL '1 day'  
-ORDER BY SOV.custid, SOV.orderdate;
+
 ```
 
 
