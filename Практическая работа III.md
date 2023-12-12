@@ -38,7 +38,7 @@ GROUP BY o.CUSTID;
 
 Использовал только "Sales"."OrderDetails"
 
-![[Pasted image 20231212111836.png]]
+![](https://github.com/madicines/db_spbtsu/blob/c823d78bb02cc4d9a22136b25264cc4a06a56a68/Pasted%20image%2020231212111836.png)
 
 ***
 ### № 5
