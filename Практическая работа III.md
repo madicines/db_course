@@ -19,7 +19,7 @@ FROM "Sales"."OrderDetails"
 
 Понял, что приведение к numeric нужно только для функции AVG()
 
-![[Pasted image 20231212110137.png]]
+![[https://github.com/madicines/db_spbtsu/blob/0dd1c2083e8b0a7d36cd90afcceb677032322ae2/Pasted%20image%2020231212110137.png]]
 
 ***
 ### № 4
